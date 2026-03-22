@@ -1,0 +1,34 @@
+# Config for baseline OpenCLIP + FAISS pipeline
+embedding:
+  model_name: ViT-B-32
+  pretrained: laion2b_s34b_b79k
+  batch_size: 32
+  device: auto  # auto -> cuda if available else cpu
+
+faiss:
+  dim: 512
+  factory: "IVF4096,PQ64"
+  nprobe: 16
+
+index:
+  output_dir: data/indexes/baseline
+  metadata_path: data/indexes/baseline/index_meta.parquet
+
+logging:
+  log_dir: logs/index-build
+  summary_file: logs/index-build/baseline.json
+
+datasets:
+  - name: dtd
+    root: data/dtd
+    glob: "**/*.jpg"
+    label_key: "class"
+    split: train
+    metadata:
+      source: "vgg"
+  - name: vistex
+    root: data/vistex
+    glob: "**/*.ppm"
+    label_key: "class"
+    metadata:
+      source: "mit"
