@@ -1,0 +1,12 @@
+{
+  "num_vectors": 200,
+  "dimension": 512,
+  "factory": "IVF4096,PQ64",
+  "index_path": "data\\indexes\\baseline\\index.faiss",
+  "metadata_path": "data\\indexes\\baseline\\index_meta.parquet",
+  "datasets": [
+    "sample"
+  ],
+  "duration_sec": 5.781965255737305,
+  "device": "cpu"
+}

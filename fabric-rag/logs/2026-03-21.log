@@ -7,3 +7,7 @@
 2026-03-22 11:30: Implemented MVP build/query CLI with OpenCLIP embeddings + FAISS index fallback, scaffolded FastAPI demo endpoints for image/text search.
 2026-03-22 12:45: Documented index-build summary template and confirmed MVP assets committed.
 2026-03-22 15:50: Attempted to download ~300 DTD samples (direct URLs + tarball) but network blocked large transfers/404; need user-provided dataset instead.
+2026-03-22 19:55: Mock SOP run: generated two "双胞胎" 面料图片集、编写业务 CSV + annotations JSON、构建 mock 索引并验证以文搜图（返回 5 条含多属性 metadata 的 JSON 结果）。
+2026-03-23 04:40: Installed full OpenCLIP/FAISS/Torch stack into local .venv, confirmed env ready for baseline build attempt (faiss import succeeds locally).
+2026-03-23 05:28: Rebuilt baseline index over 200-image DTD subset via openclip_faiss CLI (IndexFlatIP fallback), captured text+image query sanity checks and refreshed logs/index-build/baseline.json.
+2026-03-23 06:15: Added dataset-access checklist to docs/datasets.md, enumerating URLs, license reminders, and next actions per source.

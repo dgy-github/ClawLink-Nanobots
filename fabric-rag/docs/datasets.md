@@ -91,6 +91,16 @@ Goal: list candidate public datasets or references useful for fabric/texture ret
 
 > Goal: keep combined footprint under 10 GB so baseline index fits on dev laptop SSD.
 
+### Access Checklist (2026-03-23)
+| Dataset | Access Path | Notes / TODO |
+| --- | --- | --- |
+| DTD | `scripts/download_dtd_sample.py` already usable; full tarball needs reliable network | Small subset (200 imgs) verified inside repo; document retry/backoff for blocked hosts |
+| MIT VisTex | http://vismod.media.mit.edu/vismod/imagery/VisTex (per-class `.tar.gz`) | Need scripted downloader + citation text; confirm redistribution policy before mirroring |
+| Kylberg Texture | https://www.cb.uu.se/~gustaf/texture/ | Direct zip download permitted (CC-BY). Add `scripts/download_kylberg.py` placeholder + SHA256 for integrity |
+| Kaggle Fabric Pattern | Kaggle CLI (`kaggle datasets download ...`) | Requires Kaggle token stored in env; track chosen uploader + license verbatim in `docs/approvals.md` |
+| AITEX / TILDA | University contact form/email | Collect POC email + justification template referencing Baidu replacement plan |
+| DeepFashion2 | Google Form request | Prep org letter, list privacy safeguards, storage size (~50 GB) requirement |
+
 ## Approval / Access Tracker
 - **DeepFashion2:** Approval form pending — draft request once baseline proves value.
 - **CUReT:** Needs agreement form; compile rationale referencing fabric lighting variations.
