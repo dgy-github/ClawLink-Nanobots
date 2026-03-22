@@ -5,3 +5,4 @@
 2026-03-22 06:15: Added baseline config + requirements, stub data loader & pipeline CLI skeleton, created download script placeholder.
 2026-03-22 11:00: Prioritized bootstrap datasets (<10 GB), tracked approvals, noted pipeline next steps, and added utils helper module.
 2026-03-22 11:30: Implemented MVP build/query CLI with OpenCLIP embeddings + FAISS index fallback, scaffolded FastAPI demo endpoints for image/text search.
+2026-03-22 12:45: Documented index-build summary template and confirmed MVP assets committed.
